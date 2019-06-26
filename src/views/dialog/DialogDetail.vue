@@ -7,6 +7,7 @@
     <div style="text-align:center">
       <p>{{ message }}</p>
     </div>
+    <swiper-vue></swiper-vue>
     <div slot="footer">
       <Button type="primary" @click="modal=false">Delete</Button>
     </div>
@@ -15,7 +16,12 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator'
-@Component
+import SwiperVue from '@/components/SwiperVue.vue'
+@Component({
+  components: {
+    SwiperVue
+  }
+})
 export default class DialogDetail extends Vue {
   private modal: boolean = false
   @Prop(String) message!: string

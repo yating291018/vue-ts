@@ -7,9 +7,9 @@ import '@/assets/reset.scss'
 import 'iview/dist/styles/iview.css'
 import '@/common/tuhu.ts'
 import { filterInit } from '@/common/filter.ts'
-Vue.config.productionTip = false
 filterInit(Vue)
 Vue.use(iView)
+Vue.config.productionTip = false
 new Vue({
   router,
   store,
